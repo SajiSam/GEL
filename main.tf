@@ -73,7 +73,7 @@ resource "aws_s3_bucket_notification" "aws-lambda-trigger" {
   bucket = aws_s3_bucket.bucket.id
   lambda_function {
     lambda_function_arn = aws_lambda_function.test_lambda.arn
-    events              = ["s3:ObjectCreated:*", "s3:ObjectRemoved:*"]
+    events              = ["s3:ObjectCreated:*"]
 
   }
 }
@@ -136,7 +136,6 @@ resource "aws_iam_user_policy" "userBPolicy" {
             "s3:GetObject",
             "s3:GetBucketLocation",
             "s3:ListBucket"
-            "s3:PutObject"
       ],
       "Effect": "Allow",
       "Resource": [
