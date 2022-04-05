@@ -1,0 +1,7 @@
+environment            = "dev"
+function_name          = "exifremove"
+handler_name           = "lambda_function"
+runtime                = "python3.6"
+timeout                = "900"
+bucket_nameA            = "bucketA"
+bucket_nameB = "bucketB"
