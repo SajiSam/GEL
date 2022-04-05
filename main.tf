@@ -123,7 +123,7 @@ resource "aws_iam_user" "userB" {
   name = "userB"
 }
 
-resource "aws_iam_user_policy" "userAPolicy" {
+resource "aws_iam_user_policy" "userBPolicy" {
   name = "test"
   user = aws_iam_user.userB.name
 
