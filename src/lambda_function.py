@@ -22,7 +22,7 @@ def lambda_handler(event, context):
 
     try: 
         piexif.remove("/tmp/{}".format(key))
-        s3.upload_file("/tmp/{}".format(key),'uploadbucket',key)
+        s3.upload_file("/tmp/{}".format(key),'bucketB',key)
         # for ifd in ("0th", "Exif", "GPS", "1st"):
         #     for tag in exif_dict[ifd]:
 
